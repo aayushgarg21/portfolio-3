@@ -1,0 +1,146 @@
+@import 'custom';
+@import '_partial.scss';
+@import '~bootstrap/scss/bootstrap';
+
+#about-me {
+    background-size: cover;
+    padding: 3%;
+}
+
+#skill {
+    background-color: grey;
+    background-size: cover;
+    padding: 5%;
+}
+
+div {
+    h5 {
+        text-align: center;
+        padding: 3%;
+    }
+}
+
+#video {
+    background-color: #f2eadf;
+    padding: 2%;
+}
+
+.res-iframe {
+    padding: 5%;
+}
+
+#form1 {
+    align-items: center;
+}
+
+#jumb {
+    background-color: #d8315b;
+    background-size: cover;
+}
+
+.jumbotron {
+    padding: 0.5em 0.6em;
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+
+        .btn {
+            padding: 0.5em;
+        }
+    }
+}
+
+#recomen {
+    background-color: #faedca;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+div {
+    h2 {
+        text-align: center;
+    }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 5%;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+button:hover,
+a:hover {
+    opacity: 0.7;
+}
+
+#contact {
+    background-color: #faedca;
+}
+
+#icon {
+    display: inline;
+}
+
+#content1,
+#content {
+    margin: 3%;
+}
+
+.mapouter {
+    text-align: right
+}
+
+#gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 300px;
+    width: 600px;
+    margin-left: 20%;
+}
+
+body {
+    background-image: url("../img/bk1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+$mobile:900px;
+
+@mixin mobile {
+    @media(max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+
+#gmap_canvas{
+    @include mobile {
+        width: 90%;
+        float: center;
+        margin-left: 0%;
+
+    }
+}
+.card
+{
+    @include mobile(){
+        margin-left: 30%;
+    }
+}
